@@ -1,7 +1,7 @@
 language: python
 arch:
   - amd64
-  - ppc64le
+#  - ppc64le
 python:
   - 3.7
 dist: bionic
@@ -11,5 +11,5 @@ before_install:
 install:
   - cd spark/spark-tensorflow-distributor
   - pip install spark-tensorflow-distributor
-  - ./tests/integration/run.sh
+ # - ./tests/integration/run.sh
   - pylint spark_tensorflow_distributor
