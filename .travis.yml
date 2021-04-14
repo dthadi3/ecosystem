@@ -7,8 +7,9 @@ python:
 dist: bionic
 os: linux
 before_install:
-  - sudo apt install yapf3 python3-yapf
+#  - sudo apt install yapf3 python3-yapf
 install:
   - cd spark/spark-tensorflow-distributor
   - pip install spark-tensorflow-distributor
-  - ./tests/lint.sh
+  - ./tests/integration/run.sh
+  - pylint spark_tensorflow_distributor
